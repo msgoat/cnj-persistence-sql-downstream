@@ -11,6 +11,7 @@ ENV JAVA_APPLICATION_HOME=${ARG_JAVA_APPLICATION_HOME} \
     JAVA_OPTS="-XshowSettings:vm -XX:+UseG1GC -XX:MetaspaceSize=256m -XX:+DisableExplicitGC -XX:+UseStringDeduplication -XX:+ParallelRefProcEnabled" \
     EXT_JAVA_OPTS="" \
     DOCKER_JAVA_OPTS="-XX:+UseContainerSupport -XX:InitialRAMPercentage=75.0 -XX:MaxRAMPercentage=75.0" \
+    AGENT_JAVA_OPTS="" \
     SPRING_JAVA_OPTS="" \
     SPRING_PROFILES_ACTIVE="default" \
     JAVA_APPLICATION=${ARG_JAVA_APPLICATION} \
