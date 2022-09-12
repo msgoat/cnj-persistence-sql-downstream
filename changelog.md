@@ -11,3 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - re-released after repo split
 - renamed to cnj-persistence-sql-downstream (dropping the `-spring` suffix) to be more consistent with other showcases
+- added cnj-common-observability-spring to have request/response tracing
