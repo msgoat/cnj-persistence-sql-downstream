@@ -3,13 +3,13 @@ package group.msg.at.cloud.cloudtrain.adapter.rest;
 import group.msg.at.cloud.common.test.rest.RestAssuredSystemTestFixture;
 import io.restassured.http.ContentType;
 import io.restassured.response.ExtractableResponse;
+import jakarta.json.Json;
+import jakarta.json.JsonArray;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import jakarta.json.Json;
-import jakarta.json.JsonArray;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
@@ -46,7 +46,7 @@ public class GrantedPermissionsEndpointSystemTest {
     }
 
     @Test
-    public void getWithProjectNameReturnsExpectedPermissions() {
+    void getWithProjectNameReturnsExpectedPermissions() {
         ExtractableResponse response = given().log().body(true).auth().oauth2(fixture.getAccessToken())
                 .accept(ContentType.JSON)
                 .get("api/v1/grantedPermissions")

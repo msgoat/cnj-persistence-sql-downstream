@@ -7,7 +7,7 @@
 services:
 
   backend:
-    image: ${docker.image.name}:${project.version}
+    image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-persistence-sql-downstream:latest
     ports:
       - "38080:8080"
       - "38089:8089"
